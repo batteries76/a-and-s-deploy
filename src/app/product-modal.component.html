@@ -1,0 +1,16 @@
+<div [@dialog] *ngIf="isVisible" class="dialog">
+
+  <ng-content></ng-content>
+
+  <button *ngIf="closable" aria-label="Close" class="dialog__close-btn" (click)="modalShut()">X</button>
+
+  <div class="modal-heading">{{currentProduct.name}}
+  </div>
+  <img class="modal-image" src={{currentProduct.imageLoc}}>
+  <my-modal-order-area [modalProduct]="currentProduct">
+  </my-modal-order-area>
+  <div id="modal-price">Price: {{currentProduct.price}}</div>
+
+</div>
+
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

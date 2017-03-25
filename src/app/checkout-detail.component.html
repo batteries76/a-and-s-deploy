@@ -1,0 +1,18 @@
+<div>
+  Price for each: ${{product.price}}
+</div>
+<div *ngIf="product.numberOrderedSmall>0">
+  Small: {{product.numberOrderedSmall}}
+</div>
+<div *ngIf="product.numberOrderedMedium>0">
+  Medium: {{product.numberOrderedMedium}}
+</div>
+<div *ngIf="product.numberOrderedLarge>0">
+  Large: {{product.numberOrderedLarge}}
+</div>
+<div>
+  Total: {{product.numberOrderedTotal}}
+</div>
+<div>
+  Total price: ${{product.numberOrderedTotal*product.price}}
+</div>

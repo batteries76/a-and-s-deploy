@@ -1,0 +1,53 @@
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+  text-align: center;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+/*h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}*/
+
+nav {
+  position: absolute;
+  /*height: 55px;*/
+  top: 330px;
+  text-align: left;
+  font-size: 1em;
+  color: red;
+  /*display: block;*/
+  z-index: 100;
+  /*left: 30%;*/
+  /*border: 50px;*/
+}
+
+nav a {
+  /*text-align: center;*/
+  padding: 5px 10px;
+  text-decoration: none;
+  height: inherit;
+  margin-top: 0px;
+  display: inline-block;
+  background-color: darkslategrey;
+  border-radius: 4px;
+  /*text-align: center;*/
+}
+
+nav a:visited, a:link {
+  color: #607D8B;
+}
+
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+nav a.active {
+  color: #039be5;
+}

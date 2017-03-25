@@ -1,0 +1,15 @@
+<div class="contact-form">
+  <form (ngSubmit)="onSubmit(myContactFormGroup)" [formGroup]="myContactFormGroup">
+
+    <input type="string" placeholder="Name" [formControl]="myContactFormGroup.controls['name']" id="contact-name" ngModel>
+
+    <input type="email" placeholder="Email" [formControl]="myContactFormGroup.controls['email']" id="contact-email" ngModel>
+
+    <input type="text" placeholder="Your message" [formControl]="myContactFormGroup.controls['message']" id="contact-message" ngModel>
+
+    <input type="string" placeholder="Phone number" [formControl]="myContactFormGroup.controls['phoneNumber']" id="contact-number" ngModel>
+
+    <button id="contact-button" type="submit">Send Message</button>
+
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<div class="modal-details">
+  <form (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
+    <h4>Small: </h4>
+    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['small']" id="small-order" ngModel>
+    <h4>Medium: </h4>
+    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['medium']" id="medium-order" ngModel>
+    <h4>Large: </h4>
+    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['large']" id="large-order" ngModel>
+
+    <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
+
+  </form>
+</div>
