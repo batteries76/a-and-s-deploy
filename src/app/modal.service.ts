@@ -23,12 +23,9 @@ export class ModalService {
   }
 
   closeModal(){
-
     console.log('closeModal!!!');
-
     this.modalShowing.next(false);
 //    this.modalInit.next(true);
-
     console.log(this.modalShowing);
   }
 

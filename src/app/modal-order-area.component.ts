@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { ProductService } from './product.service';
+import { ModalService } from './modal.service'
 
 import { Product } from './product';
 
@@ -19,13 +20,13 @@ export class ModalOrderAreaComponent implements OnInit {
   medium: AbstractControl;
   large: AbstractControl;
 
-  ngOnInit() {}
+  ngOnInit() {  }
 
   setCheckoutProducts(){
     this.productService.getCheckoutProducts();
   }
 
-  constructor(fb: FormBuilder, private productService: ProductService) {
+  constructor(fb: FormBuilder, private productService: ProductService, private modalService: ModalService) {
     this.myOrderFormGroup = fb.group({
       'small': ['0'],
       'medium': ['0'],
@@ -48,5 +49,9 @@ export class ModalOrderAreaComponent implements OnInit {
     this.productService.getCartTotal();
   }
 
+  modalShut() {
+    console.log("modalShut!!")
+    this.modalService.closeModal();
+  }
 
 }
