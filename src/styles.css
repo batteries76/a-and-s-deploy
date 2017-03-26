@@ -2,7 +2,7 @@
 /* Master Styles */
 
 .contact-form-background {
-  width: 1000px;
+  width: 962px;
   z-index: -200;
   position: relative;
 }
@@ -46,7 +46,7 @@ body {
 
 .content-div {
   max-width: 880px;
-  padding-top: 350px;
+  padding-top: 333px;
   margin-top: 0px;
   /*width: 880px;*/
   margin-left: auto;
@@ -136,49 +136,6 @@ h4 {
   display: block;
   text-align: center;
   padding: 1em;
-}
-
-.contact-form {
-  padding: 0.5em;
-  padding-top: 0.5em;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 250%;
-  width: 80%;
-  height: 9em;
-  background-color: grey;
-  margin: 1em auto;
-  border-radius: 10px;
-}
-
-.contact-form .contact-name-email {
-  height: 30px;
-  width: 46.5%;
-  margin: 10px auto;
-  background-color: linen;
-  border-radius: 10px;
-}
-
-.contact-button {
-  background-color: white;
-  color: black;
-  border-radius: 40px;
-  font-size: 20px;
-  height: 30px;
-  width: 10em;
-}
-
-.contact-form .contact-message {
-  border-radius: 10px;
-  font-size: 14px;
-  background-color: linen;
-  position: relative;
-  width: 95%;
-  height: 20em;
-  margin: 10px auto;
-  overflow: visible;
-  text-align: justify;
-  vertical-align: top;
 }
 
 @media(max-width: 880px){
