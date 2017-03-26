@@ -1,21 +1,22 @@
 .biggest-about {
    width: 900px;
-   z-index: -1000;
+   z-index: -20000;
 }
 
 .middle-about {
    width: 760px;
-   z-index: -1000;
+   z-index: -20000;
 }
 
 .smallest-about {
    width: 380px;
-   z-index: -1000;
+   z-index: -20000;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
    .biggest-about {
      display: none;
+     z-index: -20000;
    }
 
    .middle-about {
@@ -44,6 +45,7 @@
 @media only screen and (min-width: 767px){
    .biggest-about {
      display: block;
+     z-index: -20000;
    }
 
    .middle-about {
