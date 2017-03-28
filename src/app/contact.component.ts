@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  backgroundImage = "./public/images/contact-us-page-background-drips-no-border.png"
+
 }

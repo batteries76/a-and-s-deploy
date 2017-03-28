@@ -1,5 +1,5 @@
 <img class='header-title' src="public/images/headers/header-tag-contact.png">
 
-<div class="contact-form-area" [style.background-image]="url('/public/images/contact-us-page-background-drips-no-border.png')" >
+<div class="contact-form-area" [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')'}">
   <my-contact-form></my-contact-form>
 </div>
