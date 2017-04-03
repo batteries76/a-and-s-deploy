@@ -1,13 +1,19 @@
 <div class="modal-details">
-  <form (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
-    <h4>Small: </h4>
-    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['small']" id="small-order" ngModel>
-    <h4>Medium: </h4>
-    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['medium']" id="medium-order" ngModel>
-    <h4>Large: </h4>
-    <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['large']" id="large-order" ngModel>
 
-    <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
+  <form class="form-space" (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
+    <div>I'd like to add
+      <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['number']" id="order-number" ngModel>
+    </div>
+    <div> of size
+      <select name="size" id="order-size">
+        <option value="small">S</option>
+        <option value="medium">M</option>
+        <option value="large">L</option>
+      </select>
+      <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
+    </div>
+
+  <!-- <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['large']" id="large-order" ngModel> -->
 
   </form>
 </div>

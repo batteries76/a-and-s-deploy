@@ -1,3 +1,64 @@
+#products-link {
+  background-image: url("/public/images/routes/products-button-blue.png");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  width: 110px;
+}
+
+#products-link:hover {
+  background-image: url("/public/images/routes/products-button-red.png");
+}
+
+#products-link.active {
+  background-image: url("/public/images/routes/products-button-red.png");
+}
+
+#about-link {
+  background-image: url("/public/images/routes/about-us-button-blue.png");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  width: 110px;
+}
+
+#about-link:hover {
+  background-image: url("/public/images/routes/about-us-button-red.png");
+}
+
+#about-link.active {
+  background-image: url("/public/images/routes/about-us-button-red.png");
+}
+
+#contact-link {
+  margin-left: 14px;
+  background-image: url("/public/images/routes/contact-us-button-blue.png");
+  background-size: 133px;
+  background-repeat: no-repeat;
+  width: 133px;
+}
+
+#contact-link:hover {
+  background-image: url("/public/images/routes/contact-us-button-red.png");
+}
+
+#contact-link.active {
+  background-image: url("/public/images/routes/contact-us-button-red.png");
+}
+
+#checkout-link {
+  background-image: url("/public/images/routes/checkout-button-blue.png");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  width: 110px;
+}
+
+#checkout-link:hover {
+  background-image: url("/public/images/routes/checkout-button-red.png");
+}
+
+#checkout-link.active {
+  background-image: url("/public/images/routes/checkout-button-red.png");
+}
+
 h1 {
   font-size: 1.2em;
   color: #999;
@@ -16,13 +77,13 @@ h1 {
 
 nav {
   position: absolute;
-  /*height: 55px;*/
+  height: 25px;
   top: 330px;
   text-align: left;
-  font-size: 1em;
+  font-size: 19px;
   color: red;
   /*display: block;*/
-  z-index: 100;
+  z-index: 1000;
   /*left: 30%;*/
   /*border: 50px;*/
 }
@@ -33,9 +94,10 @@ nav a {
   text-decoration: none;
   height: inherit;
   margin-top: 0px;
+  margin-left: 5px;
   display: inline-block;
-  background-color: darkslategrey;
-  border-radius: 4px;
+  background-color: black;
+  /*border-radius: 4px;*/
   /*text-align: center;*/
 }
 
@@ -45,7 +107,7 @@ nav a:visited, a:link {
 
 nav a:hover {
   color: #039be5;
-  background-color: #CFD8DC;
+  background-color: black;
 }
 
 nav a.active {

@@ -6,17 +6,17 @@
 
 <div class="content-div">
   <nav (click)="setCheckoutProducts()">
-    <a routerLink="/dashboard" routerLinkActive="active">Products</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a routerLink="/dashboard" routerLinkActive="active" id="products-link"></a>
+    <a routerLink="/about" routerLinkActive="active" id="about-link"></a>
+    <a routerLink="/contact" routerLinkActive="active" id="contact-link"></a>
     <!-- <a routerLink="/faqs" routerLinkActive="active">FAQs</a> -->
-    <a routerLink="/checkout" routerLinkActive="active">Checkout
+    <a routerLink="/checkout" routerLinkActive="active" id="checkout-link">
       <my-cart-counter [cartTotal]="cartTotal" class="counter"></my-cart-counter></a>
     <!-- <a routerLink="/custom" routerLinkActive="active">Custom</a> -->
   </nav>
 
   <div *ngIf="initModal">
-      <my-product-modal
+      <my-product-modal class="app-modal"
         [isVisible]="showDialog"
         [currentProduct]="currentProductInModal">
       </my-product-modal>

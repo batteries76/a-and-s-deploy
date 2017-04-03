@@ -10,34 +10,94 @@
   float: right;
 }
 
+.form-space {
+  height: 50px;
+}
+
+.dialog__close-btn {
+  z-index: 50000;
+  position: absolute;
+}
+
+#order-number {
+  width: 32px;
+}
+
+#order-size {
+  width: 32px;
+}
+
 .modal-heading {
-  font-size: 28px;
-  text-align: center;
+  background-color: darkslategrey;
 }
 
 #modal-price {
-  colour: lightblue;
+  background-color: darkslategrey;
 }
 
 .modal-details {
-  display: inline-block;
+  background-color: darkslategrey;
 }
 
 .modal-image {
-  width: 180px;
+  width: 100%;
   position: relative;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .dialog {
+    width: 90%;
+    top: 11%;
+    left: 4%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 600px){
+  .dialog {
+    width: 80%;
+    top: 5%;
+    left: 10%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 780px){
+  .dialog {
+    width: 65%;
+    top: 5%;
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 980px) {
+   .dialog {
+     width: 47%;
+     top: 7%;
+     left: 25%;
+   }
+}
+
+@media only screen and (min-width: 980px) {
+   .dialog {
+     width: 38%;
+     top: 7%;
+     left: 32%;
+   }
+}
+
 .dialog {
-  color: lightslategrey;
-  z-index: 1200;
+  text-align: center;
+  font-size: 18px;
+  /*overflow: auto;*/
+  color: lightblue;
+  z-index: 30000;
   background-color: darkslategrey;
-  position: fixed;
+  /*background-image: url();*/
+  position: absolute;
   /*margin: auto;*/
-  top: 13%;
-  left: 13%;
-  height: 83%;
-  width: 80%;
+  /*top: 7%;*/
+  /*left: 22%;*/
+  /*height: 65%;*/
+  /*width: 45%;*/
   max-width: 600px;
 }
 

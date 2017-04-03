@@ -1,19 +1,25 @@
 
 .contact-form-area {
   width: 1100px;
-  z-index: -200;
-  position: relative;
+  height: 1000px;
+  z-index: 200;
+  position: absolute;
   margin-top: 0px;
   background-image: url("/public/images/contact-us-page-background-drips-no-border.png");
-  background-size: 962px;
+  background-size: 963px;
   background-repeat: no-repeat;
-  height: 650px;
-  background-color: white;
+  /*height: 650px;*/
 }
 
-.contact-form {
+.contact-form-area-image {
+  width: 963px;
+  position: absolute;
+  z-index: -400;
+}
+
+/*.contact-form {
   margin-top: 241px;
-  z-index: 300;
+  z-index: 800;
   position: absolute;
   text-align: center;
   opacity: 0.4;
@@ -21,59 +27,84 @@
   width: 500px;
   height: 300px;
   /*background-color: green;*/
-  border-radius: 10px;
-}
+  /*border-radius: 10px;*/
+/*}*/*/
 
 #contact-name {
   height: 30px;
   font-size: 16px;
+  position: absolute;
+  margin-left: 0px;
+  z-index: 1000;
+  margin-top: 251px;
   float: left;
-  width: 100%;
-  margin: 10px auto;
+  background: none;
+  width: 60%;
+  /*margin: 10px auto;*/
   /*background-color: red;*/
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border: none;
 }
 
 #contact-email {
   height: 29px;
   float: left;
-  width: 100%;
+  width: 60%;
+  position: absolute;
+  background: none;
   font-size: 16px;
-  margin: 10px auto;
+  margin-top: 305px;
   /*background-color: red;*/
   border-radius: 10px;
+  border: none;
+}
+
+.force-footer {
+  margin-top: 815px;
+  z-index: -10000;
 }
 
 #contact-number {
   height: 32px;
   float: left;
+  position: absolute;
+  background: none;
   font-size: 16px;
-  width: 100%;
-  margin: 13px auto;
+  width: 60%;
+  margin-top: 526px;
   /*background-color: red;*/
   border-radius: 10px;
+  border: none;
 }
 
 #contact-button {
   width: 100%;
   float: left;
-  background-color: white;
+  position: absolute;
+  /*background-color: white;*/
+  background: none;
+  margin-top: 600px;
   color: black;
-  border-radius: 40px;
+  /*border-radius: 40px;*/
   font-size: 20px;
   height: 30px;
   width: 10em;
 }
 
 #contact-message {
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   float: left;
+  text-align: left;
+  border: none;
   font-size: 16px;
   /*background-color: red;*/
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 60%;
   height: 131px;
-  margin: 10px auto;
-  overflow: visible;
-  vertical-align: top;
+  background: none;
+  margin-top: 364px;
+  overflow: scroll;
+  word-wrap: normal;
+  wrap: hard;
+  resize: none;
 }
