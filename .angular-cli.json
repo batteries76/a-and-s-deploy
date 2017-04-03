@@ -11,7 +11,8 @@
         "assets",
         "favicon.ico",
         "public",
-        "404.html"
+        "404.html",
+        "public/images/headers"
       ],
       "index": "index.html",
       "main": "main.ts",
