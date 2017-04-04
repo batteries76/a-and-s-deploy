@@ -13,7 +13,7 @@ export class AppComponent {
 
   title = 'Axe and Sirens';
 
-  productLink = "/public/images/routes/products-button-blue.png"
+  productLink = "./public/images/routes/products-button-blue.png"
 
   initModal: boolean;
   showDialog: boolean;
