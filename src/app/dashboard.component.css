@@ -2,6 +2,10 @@
   float: left;
 }
 
+.grid2 {
+  position: absolute;
+}
+
 [class*='col-'] {
   padding-right: 20px;
 }
