@@ -60,19 +60,30 @@ export class ProductService {
     console.log("in UPDATE PRODUCT");
     console.log(this.productSource);
     console.log(productID);
+    console.log("MyOrder is: ")
+    console.log(myOrder.value)
 
     this.productSource.forEach((product, index) => {
       if(product.id === productID){
         this.index = index;
-        console.log("Index FOUND! - " + index);
+        console.log("Index FOUND! = " + index);
         console.log(product);
         console.log(this.index);
       }
     });
 
-    this.productSource[this.index].numberOrderedSmall += +myOrder.value.small;
-    this.productSource[this.index].numberOrderedMedium += +myOrder.value.medium;
-    this.productSource[this.index].numberOrderedLarge += +myOrder.value.large;
+    if (myOrder.value.orderSize === 'small') {
+      console.log("hit ORDER SMALL");
+      this.productSource[this.index].numberOrderedSmall += +myOrder.value.orderNumber;
+    }
+    if (myOrder.value.orderSize === 'medium') {
+      console.log("hit ORDER MEDIUM");
+      this.productSource[this.index].numberOrderedMedium += +myOrder.value.orderNumber;
+    }
+    if (myOrder.value.orderSize === 'large') {
+      console.log("hit ORDER LARGE");
+      this.productSource[this.index].numberOrderedLarge += +myOrder.value.orderNumber;
+    }
 
     this.productSource[this.index].numberOrderedTotal = this.productSource[this.index].numberOrderedSmall + this.productSource[this.index].numberOrderedMedium + this.productSource[this.index].numberOrderedLarge;
   }

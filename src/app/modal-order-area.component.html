@@ -1,19 +1,16 @@
 <div class="modal-details">
 
   <form class="form-space" (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
-    <div>I'd like to add
-      <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['number']" id="order-number" ngModel>
-    </div>
-    <div> of size
-      <select name="size" id="order-size">
-        <option value="small">S</option>
-        <option value="medium">M</option>
-        <option value="large">L</option>
-      </select>
-      <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
-    </div>
-
-  <!-- <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['large']" id="large-order" ngModel> -->
-
+    <div> I'd like to add
+      <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['orderNumber']" id="order-number" ngModel>
+     of size
+    <select name="size" [formControl]="myOrderFormGroup.controls['orderSize']">
+      <option *ngFor="let size of sizes" [value]="size.value">
+      {{size.display}}
+      </option>
+    </select>
+    <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
+  </div>
   </form>
+
 </div>

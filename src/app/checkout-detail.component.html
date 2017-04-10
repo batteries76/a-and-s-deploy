@@ -1,18 +1,18 @@
-<div>
+<div class="checkout-product-price">
   Price for each: ${{product.price}}
 </div>
-<div *ngIf="product.numberOrderedSmall>0">
+<div *ngIf="product.numberOrderedSmall>0" class="checkout-product-small">
   Small: {{product.numberOrderedSmall}}
 </div>
-<div *ngIf="product.numberOrderedMedium>0">
+<div *ngIf="product.numberOrderedMedium>0" class="checkout-product-medium">
   Medium: {{product.numberOrderedMedium}}
 </div>
-<div *ngIf="product.numberOrderedLarge>0">
+<div *ngIf="product.numberOrderedLarge>0" class="checkout-product-large">
   Large: {{product.numberOrderedLarge}}
 </div>
-<div>
+<div class="checkout-product-total-number">
   Total: {{product.numberOrderedTotal}}
 </div>
-<div>
+<div class="checkout-product-total-price">
   Total price: ${{product.numberOrderedTotal*product.price}}
 </div>

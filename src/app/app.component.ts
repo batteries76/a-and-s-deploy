@@ -3,6 +3,10 @@ import { ModalService } from './modal.service';
 import { ProductService } from './product.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Product } from './product';
+// modal code
+import { ViewContainerRef } from '@angular/core';
+import { Overlay } from 'angular2-modal';
+import { Modal } from 'angular2-modal/plugins/bootstrap';
 
 @Component({
   selector: 'my-app',
@@ -19,11 +23,33 @@ export class AppComponent {
   cartTotal: number = 0;
   appProducts: Product[];
 
+// modal option?
+  // onClick() {
+  // this.modal.alert()
+  //     .size('lg')
+  //     .showClose(true)
+  //     .title('A simple Alert style modal window')
+  //     .body(`
+  //         <h5>Alert is a classic (title/body/footer) 1 button modal window that
+  //         does not block.</h5>
+  //         <b>Configuration:</b>
+  //         <ul>
+  //             <li>Non blocking (click anywhere outside to dismiss)</li>
+  //             <li>Size large</li>
+  //             <li>Dismissed with default keyboard key (ESC)</li>
+  //             <li>Close wth button click</li>
+  //             <li>HTML content</li>
+  //         </ul>`)
+  //     .open();
+  // }
+
   setCheckoutProducts(){
     this.productService.getCheckoutProducts();
   }
 
-  constructor(private modalService: ModalService, private productService: ProductService) {
+  constructor(private modalService: ModalService, private productService: ProductService, overlay: Overlay, vcRef: ViewContainerRef, public modal: Modal) {
+
+    overlay.defaultViewContainer = vcRef;
 
     this.productService.getHttpProducts()
       .then(products => {

@@ -27,6 +27,9 @@ import { CheckoutDetailComponent } from './checkout-detail.component';
 import { ProductService }          from './product.service';
 import { ModalService }            from './modal.service';
 
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+
 import { routing }                 from './app.routing';
 
 @NgModule({
@@ -36,7 +39,9 @@ import { routing }                 from './app.routing';
     ReactiveFormsModule,
     HttpModule,
     routing,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    BootstrapModalModule,
+    ModalModule.forRoot()
   ],
   declarations: [
     AppComponent,

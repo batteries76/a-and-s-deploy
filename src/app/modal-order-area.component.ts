@@ -16,9 +16,14 @@ export class ModalOrderAreaComponent implements OnInit {
 
   @Input() modalProduct: Product;
 
-  small: AbstractControl;
-  medium: AbstractControl;
-  large: AbstractControl;
+  public sizes = [
+      { value: 'small', display: 'S' },
+      { value: 'medium', display: 'M' },
+      { value: 'large', display: 'L' }
+  ];
+
+  orderNumber: AbstractControl;
+  orderSize: AbstractControl;
 
   ngOnInit() {  }
 
@@ -28,25 +33,23 @@ export class ModalOrderAreaComponent implements OnInit {
 
   constructor(fb: FormBuilder, private productService: ProductService, private modalService: ModalService) {
     this.myOrderFormGroup = fb.group({
-      'small': ['0'],
-      'medium': ['0'],
-      'large': ['0']
+      'orderNumber': ['0'],
+      'orderSize': ['S'],
     });
 
-    this.small = this.myOrderFormGroup.controls['small'];
-    this.medium = this.myOrderFormGroup.controls['medium'];
-    this.large = this.myOrderFormGroup.controls['large'];
+    this.orderNumber = this.myOrderFormGroup.controls['orderNumber'];
+    this.orderSize = this.myOrderFormGroup.controls['orderSize'];
   }
 
   onAddToCart(myOrder: any, productID: number): void {
     console.log('You submitted order = ', myOrder);
     console.log('You submitted myOrder.value = ', myOrder.value);
-    console.log('You submitted myOrder.value.small = ', myOrder.value.small);
 
     console.log("in onAddToCart");
     console.log(productID);
     this.productService.updateProduct(productID, myOrder);
     this.productService.getCartTotal();
+    this.modalShut();
   }
 
   modalShut() {

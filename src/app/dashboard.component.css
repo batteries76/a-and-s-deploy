@@ -2,12 +2,34 @@
   float: left;
 }
 
-.checkout-details{
-
+[class*='col-'] {
+  padding-right: 20px;
 }
 
-.checkout-product {
-  float: right;
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.col-left {
+  width: 15%;
+  background-color: lightgreen;
+  margin-left: 8px;
+  font-size: 10px;
+}
+
+.col-right {
+  width: 80%;
+  background-color: blue;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.col-total {
+  width: 75%;
+}
+
+.checkout-product-image {
+  width: 100%;
 }
 
 .form-space {
@@ -46,6 +68,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   .dialog {
+    position: absolute;
     width: 90%;
     top: 11%;
     left: 4%;
@@ -123,6 +146,7 @@ h3 {
 /*.grid {
   margin: 0;
 }*/
+
 .col-1-4 {
   width: 17em;
   height: 20em;
