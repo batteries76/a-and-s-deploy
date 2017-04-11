@@ -18,11 +18,22 @@ export class ProductService {
   cartNumber = new Subject<number>();
   cartCounter: number = 0;
 
+  totalCostSubject = new Subject<number>();
+  totalCost = 0;
+
   index: number = -1;
 
   checkoutProducts: Product[] = [];
   filteredProducts: Product[] = [];
   filteredProductSubject = new Subject<Product[]>();
+
+  getTotalCost(){
+    this.totalCost = 0;
+    for (let product of this.filteredProducts){
+      this.totalCost += product.numberOrderedTotal*product.price;
+    }
+    this.totalCostSubject.next(this.totalCost);
+  }
 
   getCheckoutProducts() {
     this.filteredProducts = [];
@@ -34,9 +45,30 @@ export class ProductService {
       }
     }
     this.filteredProductSubject.next(this.filteredProducts);
+    this.getTotalCost();
   }
 
   constructor(private http: Http) {
+  }
+
+  deleteProduct(product: Product){
+    console.log("In the DELETE PRODUCT function")
+    var id = product.id;
+
+    this.productSource.forEach((product, index) => {
+      if(product.id === id){
+        this.index = index;
+        console.log("Index FOUND! = " + index);
+        console.log(product);
+        console.log(this.index);
+      }
+    });
+    this.productSource[this.index].numberOrderedSmall = 0;
+    this.productSource[this.index].numberOrderedMedium = 0;
+    this.productSource[this.index].numberOrderedLarge = 0;
+    this.productSource[this.index].numberOrderedTotal = 0;
+
+    this.getCartTotal();
   }
 
   getHttpProducts() {

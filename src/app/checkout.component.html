@@ -10,7 +10,17 @@
     </div>
 
   </div>
-  <div class="col-total">
-    Total cost: ${{totalCost}}
+  <div *ngIf="totalCost>0" class="col-total">
+    <div class="total-cost">
+      Total cost: ${{totalCost}}
+    </div>
+    <div class="cart-button" (click)="openCheckout(totalCost)">
+      Cart Button
+    </div>
+  </div>
+  <div *ngIf="totalCost===0" class="col-total">
+    <div class="total-cost">
+      Nothing in cart!
+    </div>
   </div>
 </div>

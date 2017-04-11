@@ -2,6 +2,23 @@
   float: left;
 }
 
+.cart-button {
+  color: white;
+  background-color: darkslategrey;
+  width: 60px;
+  margin-top: 20px;
+  padding: 7px;
+}
+
+.cart-button:hover {
+  background-color: lightslategrey;
+}
+
+.delete-order-button {
+  float: right;
+  margin-right: 40px;
+}
+
 .checkout-details {
   position: relative;
   margin-left: 5px;
@@ -13,6 +30,12 @@
   margin-left: 5px;
   width: 100%;
   top: 550px;
+}
+
+.grid2:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .checkout-product-name {
@@ -51,7 +74,7 @@
 
 .col-total {
   width: 75%;
-  background: whitesmoke;
+  background: wheat;
   height: 140px;
   padding: 15px;
 }

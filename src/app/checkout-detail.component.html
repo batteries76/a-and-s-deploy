@@ -7,18 +7,20 @@
     Price for each: ${{product.price}}
   </div>
   <div *ngIf="product.numberOrderedSmall>0" class="checkout-product-small">
-    Small: {{product.numberOrderedSmall}}
+    Number of small ordered: {{product.numberOrderedSmall}}
   </div>
   <div *ngIf="product.numberOrderedMedium>0" class="checkout-product-medium">
-    Medium: {{product.numberOrderedMedium}}
+    Number of medium ordered: {{product.numberOrderedMedium}}
   </div>
   <div *ngIf="product.numberOrderedLarge>0" class="checkout-product-large">
-    Large: {{product.numberOrderedLarge}}
+    Number of large ordered: {{product.numberOrderedLarge}}
   </div>
   <div class="checkout-product-total-number">
-    Total: {{product.numberOrderedTotal}}
+    Total ordered: {{product.numberOrderedTotal}}
   </div>
   <div class="checkout-product-total-price">
     Total price: ${{product.numberOrderedTotal*product.price}}
+  </div>
+  <div class="delete-order-button" (click)="deleteOrderedElement(product)">X
   </div>
 <div>
