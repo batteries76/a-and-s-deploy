@@ -1,15 +1,11 @@
 <img class='header-title' src="public/images/headers/header-tag-checkout.png">
 <h3>Checkout</h3>
-<div  class="grid2">
+<div class="grid2">
 
   <div *ngFor="let product of filteredProducts">
 
     <div *ngIf="product.numberOrderedTotal>0">
-      <div class="col-left">
-        <img class="checkout-product-image" src={{product.imageLoc}}>
-        <div class="checkout-product-name">{{product.name}}</div>
-      </div>
-      <my-checkout-detail [product]="product" class="col-right">
+      <my-checkout-detail [product]="product" class="col-single">
       </my-checkout-detail>
     </div>
 

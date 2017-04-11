@@ -24,13 +24,6 @@
   margin-top: 0px;
 }
 
-/*router-outlet {
-  position: relative;
-  margin-top: 800px;
-  padding-top: 400px;
-  z-index: 0;
-}*/
-
 .header-div {
   /*position: absolute;*/
   width: 880px;
@@ -103,11 +96,10 @@ h4 {
 }
 
 .footer {
-  /*position: absolute;
-  bottom: 0;*/
+  position: relative;
   color: slategrey;
   top: 80px;
-  position: relative;
+  margin-top: 1000px;
   bottom: 0;
   display: block;
   background-color: bisque;

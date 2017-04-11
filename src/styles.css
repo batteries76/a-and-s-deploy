@@ -113,13 +113,11 @@ h4 {
 }
 
 .footer {
-  /*position: absolute;
-  bottom: 0;*/
   color: slategrey;
-  top: 80px;
+  top: 600px;
   position: relative;
   bottom: 0;
-  display: block;
+  /*display: block;*/
   background-color: bisque;
   width: 100%;
   min-height: 10px;

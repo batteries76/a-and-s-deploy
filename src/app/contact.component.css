@@ -103,7 +103,7 @@
   height: 131px;
   background: none;
   margin-top: 364px;
-  overflow: scroll;
+  overflow: hidden;
   word-wrap: normal;
   wrap: hard;
   resize: none;
