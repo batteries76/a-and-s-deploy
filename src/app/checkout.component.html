@@ -1,5 +1,5 @@
-<img class='header-title' src="public/images/headers/header-tag-checkout.png">
-<h3>Checkout</h3>
+<!-- <img class='header-title' src="public/images/headers/header-tag-checkout.png">
+<h3>Checkout</h3> -->
 <div class="grid2">
 
   <div *ngFor="let product of filteredProducts">
@@ -10,6 +10,7 @@
     </div>
 
   </div>
+
   <div *ngIf="totalCost>0" class="col-total">
     <div class="total-cost">
       Total cost: ${{totalCost}}
@@ -23,4 +24,5 @@
       Nothing in cart!
     </div>
   </div>
+
 </div>

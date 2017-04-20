@@ -81,8 +81,8 @@ h1 {
 
 nav {
   position: absolute;
-  height: 25px;
-  top: 330px;
+  height: 35px;
+  top: 285px;
   text-align: left;
   font-size: 19px;
   color: red;
@@ -94,11 +94,11 @@ nav {
 
 nav a {
   /*text-align: center;*/
-  padding: 5px 10px;
+  padding: 2px 5px;
   text-decoration: none;
   height: inherit;
   margin-top: 0px;
-  margin-left: 5px;
+  margin-left: 3px;
   display: inline-block;
   background-color: black;
   /*border-radius: 4px;*/

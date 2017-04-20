@@ -5,10 +5,10 @@
       <img src={{currentProduct.imageLoc}} class="modal-image">
   </div>
 
-  <div class="modal-heading">Product: {{currentProduct.name}}
+  <div class="modal-heading">Product Name : {{currentProduct.name}}
   </div>
 
-  <div id="modal-price">Price: {{currentProduct.price}}</div>
+  <div id="modal-price">Price : ${{currentProduct.price}}</div>
 
   <my-modal-order-area [modalProduct]="currentProduct">
   </my-modal-order-area>

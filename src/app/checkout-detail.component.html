@@ -1,25 +1,25 @@
 <img class="checkout-product-image" src={{product.imageLoc}}>
 <div class="checkout-details">
-  <div class="checkout-product-name">
-    {{product.name}}
+  <div class="checkout-product name">
+    Product name : {{product.name}}<br>
   </div>
-  <div class="checkout-product-price">
-    Price for each: ${{product.price}}
+  <div class="checkout-product price">
+    Price for each : ${{product.price}}<br>
   </div>
-  <div *ngIf="product.numberOrderedSmall>0" class="checkout-product-small">
-    Number of small ordered: {{product.numberOrderedSmall}}
+  <div *ngIf="product.numberOrderedSmall>0" class="checkout-product small">
+    Number of small ordered: {{product.numberOrderedSmall}}<br>
   </div>
-  <div *ngIf="product.numberOrderedMedium>0" class="checkout-product-medium">
-    Number of medium ordered: {{product.numberOrderedMedium}}
+  <div *ngIf="product.numberOrderedMedium>0" class="checkout-product medium">
+    Number of medium ordered: {{product.numberOrderedMedium}}<br>
   </div>
-  <div *ngIf="product.numberOrderedLarge>0" class="checkout-product-large">
-    Number of large ordered: {{product.numberOrderedLarge}}
+  <div *ngIf="product.numberOrderedLarge>0" class="checkout-product large">
+    Number of large ordered: {{product.numberOrderedLarge}}<br>
   </div>
-  <div class="checkout-product-total-number">
-    Total ordered: {{product.numberOrderedTotal}}
+  <div class="checkout-product total-number">
+    Total ordered: {{product.numberOrderedTotal}}<br>
   </div>
-  <div class="checkout-product-total-price">
-    Total price: ${{product.numberOrderedTotal*product.price}}
+  <div class="checkout-product total-price">
+    Total price: ${{product.numberOrderedTotal*product.price}}<br>
   </div>
   <div class="delete-order-button" (click)="deleteOrderedElement(product)">X
   </div>

@@ -1,18 +1,17 @@
 .footer {
+  /*clear: both;*/
   position: relative;
   color: slategrey;
-  top: 80px;
-  margin-top: 1000px;
-  bottom: 0;
-  display: block;
+  margin-top: 80px;
+  margin-bottom: 25px;
+  display: inline-block;
   background-color: bisque;
   width: 100%;
   min-height: 10px;
-  margin: 2em;
 }
 
 #foot-note {
   display: block;
   text-align: center;
-  padding: 1em;
+  padding: 5px;
 }

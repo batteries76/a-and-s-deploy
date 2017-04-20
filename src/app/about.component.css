@@ -2,6 +2,10 @@
   height: 1450px;
 }
 
+.top-padding {
+  height: 70px;
+}
+
 .biggest-about {
    position: absolute;
    width: 900px;

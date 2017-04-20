@@ -2,6 +2,17 @@
   float: left;
 }
 
+#add-products-button {
+  cursor: pointer;
+  height: 25px;
+  color: black;
+  /*background-color: red;*/
+}
+
+.top-padding {
+  height: 70px;
+}
+
 .cart-button {
   color: white;
   background-color: darkslategrey;
@@ -26,10 +37,12 @@
 }
 
 .grid2 {
-  position: absolute;
-  margin-left: 5px;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 30px;
+  min-width: 550px;
   width: 100%;
-  top: 550px;
+  /*top: 550px;*/
 }
 
 .grid2:after {
@@ -39,11 +52,20 @@
 }
 
 .checkout-product-name {
-  display: inline-block;
+  /*display: inline-block;*/
+  float: left;
+  width: 55%;
+}
+
+.product-name {
+  margin-top: 5px;
+  font-size: 19px;
 }
 
 .checkout-product-price {
-  display: inline-block;
+  display: block;
+  float: left;
+  width: 55%;
 }
 
 [class*='col-'] {
@@ -52,6 +74,12 @@
 
 [class*='col-']:last-of-type {
   padding-right: 0;
+}
+
+.checkout-product {
+  float: left;
+  width: 55%;
+  color: black;
 }
 
 .col-left {
@@ -68,12 +96,12 @@
   background-color: powderblue;
   padding: 5px;
   height: 140px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   position: relative;
 }
 
 .col-total {
-  width: 75%;
+  width: 30%;
   background: wheat;
   height: 140px;
   padding: 15px;
@@ -86,33 +114,45 @@
   margin-right: 10px;
 }
 
-.form-space {
+.modal-form-space {
   height: 50px;
+  margin-left: 25px;
+  margin-top: 9px;
 }
 
 .dialog__close-btn {
   z-index: 50000;
   position: absolute;
+  cursor: pointer;
 }
 
 #order-number {
-  width: 32px;
+  width: 30px;
+  height: 20px;
 }
 
 #order-size {
   width: 32px;
+  height: 15px;
 }
 
 .modal-heading {
-  background-color: darkslategrey;
+  background-color: gainsboro;
+  margin-left: 45px;
+  margin-top: 6px;
+  margin-right: 10px;
 }
 
 #modal-price {
-  background-color: darkslategrey;
+  background-color: gainsboro;
+  margin-left: 45px;
+  margin-top: 4px;
 }
 
 .modal-details {
-  background-color: darkslategrey;
+  background-color: gainsboro;
+  font-family: "Eras ITC", "Eras Light ITC";
+  margin-left: 25px;
 }
 
 .modal-image {
@@ -162,14 +202,15 @@
 }
 
 .dialog {
-  text-align: center;
+  text-align: left;
   font-size: 18px;
+  font-family: "Eras ITC", "Eras Light ITC";
   /*overflow: auto;*/
-  color: lightblue;
+  color: black;
   z-index: 30000;
-  background-color: darkslategrey;
+  background-color: gainsboro;
   /*background-image: url();*/
-  position: absolute;
+  position: fixed;
   /*margin: auto;*/
   /*top: 7%;*/
   /*left: 22%;*/
@@ -204,7 +245,7 @@ h3 {
 .col-1-4 {
   width: 17em;
   height: 20em;
-  background-color: darkkhaki;
+  background-color: ghostwhite;
   padding: 0;
   margin: 0.65em;
 }

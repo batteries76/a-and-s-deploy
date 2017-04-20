@@ -1,6 +1,6 @@
 <div class="modal-details">
 
-  <form class="form-space" (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
+  <form class="modal-form-space" (ngSubmit)="onAddToCart(myOrderFormGroup, modalProduct.id)" [formGroup]="myOrderFormGroup">
     <div> I'd like to add
       <input type="number" value="0" min="0" [formControl]="myOrderFormGroup.controls['orderNumber']" id="order-number" ngModel>
      of size
@@ -9,7 +9,7 @@
       {{size.display}}
       </option>
     </select>
-    <button id="contact-button" (click)="setCheckoutProducts()" type="submit">Add to cart!</button>
+    <button id="add-products-button" (click)="setCheckoutProducts()" type="submit">Add!</button>
   </div>
   </form>
 

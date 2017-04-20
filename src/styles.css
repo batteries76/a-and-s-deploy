@@ -4,6 +4,7 @@
 .counter {
   float: right;
   padding-left: 7px;
+  margin-top: 4px;
   color: red;
 }
 
