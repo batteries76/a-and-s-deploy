@@ -1,5 +1,6 @@
 
 .contact-form-area {
+  display: inline-flex;
   width: 1100px;
   height: 1000px;
   z-index: 200;
@@ -10,12 +11,12 @@
   background-repeat: no-repeat;
   /*height: 650px;*/
 }
-
+/*
 .contact-form-area-image {
   width: 963px;
   position: absolute;
   z-index: -400;
-}
+}*/
 
 /*.contact-form {
   margin-top: 241px;
@@ -60,8 +61,7 @@
 }
 
 .force-footer {
-  margin-top: 815px;
-  z-index: -10000;
+  margin-top: 0px;
 }
 
 #contact-number {

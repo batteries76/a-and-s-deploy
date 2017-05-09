@@ -56,7 +56,7 @@ export class CheckoutComponent implements OnChanges {
 
     handler.open({
       name: 'Axe and Sirens',
-      description: 'Ready to pay for ' + this.totalTshirts + ' t-shirts?',
+      description: 'Ready to pay for ' + this.totalTshirts + ' Tshirts?',
       amount: amount*100
     });
 

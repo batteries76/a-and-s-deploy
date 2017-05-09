@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, trigger, state, style, transition, animate } from '@angular/core';
 import { ModalService } from './modal.service';
 import { ProductService } from './product.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -11,7 +11,19 @@ import { Modal } from 'angular2-modal/plugins/bootstrap';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+  trigger('slideInOut', [
+    state('in', style({
+      transform: 'translate3d(0, 0, 0)'
+    })),
+    state('out', style({
+      transform: 'translate3d(-500px, 0, 0)'
+    })),
+    transition('in => out', animate('400ms ease-in-out')),
+    transition('out => in', animate('400ms ease-in-out'))
+  ]),
+]
 })
 export class AppComponent {
 
@@ -23,8 +35,14 @@ export class AppComponent {
   cartTotal: number = 0;
   appProducts: Product[];
 
+  menuState: string = 'out';
+
   setCheckoutProducts(){
     this.productService.getCheckoutProducts();
+  }
+
+  toggleMenu() {
+    this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
 
   constructor(private modalService: ModalService, private productService: ProductService, overlay: Overlay, vcRef: ViewContainerRef, public modal: Modal) {

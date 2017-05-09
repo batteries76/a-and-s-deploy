@@ -1,17 +1,4 @@
-.footer {
-  /*clear: both;*/
-  position: relative;
-  color: slategrey;
-  margin-top: 80px;
-  margin-bottom: 25px;
-  display: inline-block;
-  background-color: bisque;
-  width: 100%;
-  min-height: 10px;
-}
-
 #foot-note {
-  display: block;
   text-align: center;
   padding: 5px;
 }

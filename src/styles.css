@@ -19,10 +19,8 @@ body {
 
 .header-title {
   position: absolute;
-  top: 284px;
   width: 145px;
   margin-left: 0px;
-  margin-top: 0px;
 }
 
 /*router-outlet {
@@ -32,32 +30,6 @@ body {
   z-index: 0;
 }*/
 
-.header-div {
-  /*position: absolute;*/
-  width: 880px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.content-div {
-  max-width: 880px;
-  padding-top: 333px;
-  margin-top: 0px;
-  /*width: 880px;*/
-  margin-left: auto;
-  margin-right: auto;
-  /*float: left;*/
-}
-
-.banner {
-  width: 880px;
-  position: absolute;
-  /*float: left;*/
-  z-index: -100;
-  /*margin-left: 100px;*/
-  /*margin-right: auto;*/
-}
-
 h1 {
   color: #369;
   font-family: Eras ITC, Eras Light ITC, Arial, Helvetica, sans-serif;
@@ -66,7 +38,6 @@ h1 {
 
 h2, h3 {
   position: relative;
-  top: 2em;
   text-align: center;
   font-size: 3em;
   color: darkslategrey;
@@ -77,7 +48,6 @@ h2, h3 {
 body, input[text], button {
   color: #888;
   font-family: Eras ITC, Eras Light ITC, Cambria, Georgia;
-  margin: 0;
 }
 /* . . . */
 /* everywhere else */
@@ -86,17 +56,13 @@ body, input[text], button {
 }
 
 h4 {
-  position: relative;
   text-align: justify;
   width: 85%;
   font-size: 18px;
-  margin: 0 auto;
-  top: 5em;
 }
 
 .product-name {
   position: relative;
-  top: 0;
   text-align: center;
 }
 
@@ -110,7 +76,6 @@ h4 {
   margin: 0 auto;
   overflow: inherit;
   position: relative;
-  top: 5em;
 }
 
 @media(max-width: 880px){

@@ -12,7 +12,8 @@ import { Product }                  from './product';
 })
 export class ProductDetailComponent implements OnInit {
 
-
+  product: any;
+  
   ngOnInit(){}
   // @Input()
   // product: Product;

@@ -32,6 +32,8 @@ import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 
 import { routing }                 from './app.routing';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { routing }                 from './app.routing';
     routing,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     BootstrapModalModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

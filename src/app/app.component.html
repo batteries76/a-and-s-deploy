@@ -1,32 +1,34 @@
 <!-- <img class="banner" src="http://placehold.it/850x300"> -->
-
-<div class="header-div">
-  <img class="banner" src="./public/images/headers/final-header.png">
-</div>
-
-<div class="content-div">
-  <nav (click)="setCheckoutProducts()">
-    <a routerLink="/dashboard" routerLinkActive="active" id="products-link"></a>
-    <a routerLink="/about" routerLinkActive="active" id="about-link"></a>
-    <a routerLink="/contact" routerLinkActive="active" id="contact-link"></a>
-    <!-- <a routerLink="/faqs" routerLinkActive="active">FAQs</a> -->
-    <a routerLink="/checkout" routerLinkActive="active" id="checkout-link">
-      <my-cart-counter [cartTotal]="cartTotal" class="counter"></my-cart-counter></a>
-    <!-- <a routerLink="/custom" routerLinkActive="active">Custom</a> -->
-  </nav>
-
-  <div *ngIf="initModal">
-      <my-product-modal class="app-modal"
-        [isVisible]="showDialog"
-        [currentProduct]="currentProductInModal">
-      </my-product-modal>
+<div class="app-div">
+  <div class="header-div">
+    <!-- <button (click)="toggleMenu()" class="hamburger">
+      <span>toggle menu</span>
+    </button> -->
+    <!-- <nav [@slideInOut]="menuState" (click)="setCheckoutProducts()"> -->
+    <nav (click)="setCheckoutProducts()">
+      <a routerLink="/dashboard" routerLinkActive="active" id="products-link"></a>
+      <a routerLink="/about" routerLinkActive="active" id="about-link"></a>
+      <a routerLink="/contact" routerLinkActive="active" id="contact-link"></a>
+      <!-- <a routerLink="/faqs" routerLinkActive="active">FAQs</a> -->
+      <a routerLink="/checkout" routerLinkActive="active" id="checkout-link">
+        <my-cart-counter [cartTotal]="cartTotal" class="counter"></my-cart-counter></a>
+      <!-- <a routerLink="/custom" routerLinkActive="active">Custom</a> -->
+    </nav>
   </div>
 
-  <!-- <button class="modal-button" (click)="onClick()">Alert</button> -->
+  <div class="content-div">
 
-  <router-outlet>
-    </router-outlet>
+    <div *ngIf="initModal">
+        <my-product-modal class="app-modal"
+          [isVisible]="showDialog"
+          [currentProduct]="currentProductInModal">
+        </my-product-modal>
+    </div>
 
-  <my-footer></my-footer>
+    <!-- <button class="modal-button" (click)="onClick()">Alert</button> -->
 
+    <router-outlet>
+      </router-outlet>
+  </div>
+  <my-footer class="footer"></my-footer>
 </div>
